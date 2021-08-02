@@ -1,0 +1,158 @@
+body {
+    background-color: rgb(20, 41, 20);
+  
+    /* Smoothly transition the background color */
+    transition: background-color .5s;
+  }
+  
+  .player {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+  }
+  
+  /* Loading background image of music and cutomizing it with animation */
+  .music-bg{
+    margin: 15px;
+    height: 200px;
+    width: 200px;
+    
+    background-size: cover;
+    border-radius: 100%;
+
+    animation: rotate 5s linear infinite;
+    animation-play-state: paused;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+ 
+
+  .now-playing {
+    font-size: 1rem;
+  }
+  
+  /* Cutomizing music title*/
+  .music-name {
+    font-size: 2.3rem;
+    background-color: rgb(216, 182, 238);
+    border-radius: 5px;
+    box-shadow: 0 5px 5px 0 rgba(226, 48, 87, 0.6);
+    padding: 5px 8px;
+    position: relative;
+    margin: 5px 0;
+    z-index: 5;
+  }
+  
+  /*Customizing music artist name*/
+  .music-artist {
+    font-size: 1.5rem;  
+    background-color: rgb(216, 182, 238);
+    border-radius: 5px;
+    box-shadow: 0 5px 5px 0 rgba(226, 48, 87, 0.6);
+    padding: 5px 8px;
+    position: relative;
+    margin: 5px 0;
+    z-index: 5;
+  }
+  
+  /* Customizing play/pause buttons*/
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 9px;
+    box-shadow: 0 6px 6px 0 rgba(241, 58, 58, 0.6);
+    padding: 6px 9px;
+    position: relative;
+    margin: 6px 0;
+    z-index: 6;
+
+  }
+  
+  .playpause-music, .prev-music, .next-music {
+    padding: 25px;
+    opacity: 0.8;
+  
+    /* Smoothly transition the opacity */
+    transition: opacity .2s;
+  }
+  
+  .playpause-music:hover, .prev-music:hover, .next-music:hover {
+    opacity: 1.0;
+  }
+  
+  .slider_container {
+    width: 50%;
+    max-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+  }
+  
+  /* Cutomize slider */
+  .seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: black;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  /* Cutomizing slider thumb */
+  .seek_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  /* Providing opacity to slider*/
+  .seek_slider:hover, .volume_slider:hover {
+    opacity: 1.0;
+  }
+  
+  .seek_slider {
+    width: 60%;
+  }
+  
+  .volume_slider {
+    width: 30%;
+  }
+  
+  .current-time, .total-duration {
+    padding: 10px;
+  }
+  
+  i.fa-volume-down, i.fa-volume-up {
+    padding: 10px;
+  }
+  
+  i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
+    cursor: pointer;
+  }
+

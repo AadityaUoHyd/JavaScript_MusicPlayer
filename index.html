@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Media Player</title>
+  <!-- For customized font, FontAwesome loading from cloudflare-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+  <!-- Loading our file with custom CSS -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="player">
+    <div class="details">
+      <div class="now-playing">PLAYING SONG NUMBER x OF TOTAL y</div>
+      <div class="music-bg" id="rotateMe"></div>
+      <div class="music-name">Music Name</div>
+      <div class="music-artist">Music Artist</div>
+    </div>
+    <div class="buttons">
+      <div class="prev-music" onclick="prevMusic()"><i class="fa fa-step-backward fa-2x"></i></div>
+      <div class="playpause-music" onclick="playpauseMusic()"><i class="fa fa-play-circle fa-5x"></i></div>
+      <div class="next-music" onclick="nextMusic()"><i class="fa fa-step-forward fa-2x"></i></div>
+    </div>
+    <div class="slider_container">
+      <div class="current-time">00:00</div>
+      <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+      <div class="total-duration">00:00</div>
+    </div>
+    <div class="slider_container">
+      <i class="fa fa-volume-down" ></i>
+      <input type="range" min="1" max="100" value="99" class="volume_slider"  onchange="setVolume()">
+      <i class="fa fa-volume-up"></i>
+
+    </div>
+  </div>
+
+  <!-- Loading our javascript file -->
+  <script src="script.js"></script>
+</body>
+</html>
